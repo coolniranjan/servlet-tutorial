@@ -11,7 +11,7 @@ public class use_of_http_servlet extends HttpServlet{
         Response.setContentType("text/html");
         PrintWriter pw = Response.getWriter(); 
         pw.println("<h2>Hello from life cycle by Http servlet</h2>");
-         pw.println("<a href='http://localhost:9494/WebApplication1/'>back</a>");
+         pw.println("<a href='/WebApplication1/index.html'>back</a>");
             
     }
 }

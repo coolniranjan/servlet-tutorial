@@ -21,7 +21,7 @@ public class use_of_servlet implements Servlet {
         res.setContentType("text/html");
         PrintWriter pw = res.getWriter(); 
         pw.println("<h2>Hello from first servlet</h2>");
-        pw.println("<a href='http://localhost:9494/WebApplication1/'>back</a>");
+        pw.println("<a href='/WebApplication1/index.html'>back</a>");
         System.out.println("in service");
     }
 

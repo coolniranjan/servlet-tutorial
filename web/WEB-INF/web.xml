@@ -1,47 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+   
+    <!--add welcome page-->
+
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
     <!--servlates declartion-->
+   
     <servlet>
-         <servlet-name>first</servlet-name>
-         <servlet-class>com.servlets.use_of_servlet</servlet-class>
+        <servlet-name>first</servlet-name>
+        <servlet-class>com.servlets.use_of_servlet</servlet-class>
     </servlet>
     <servlet-mapping>
-         <servlet-name>first</servlet-name>
-         <url-pattern>/web</url-pattern>
+        <servlet-name>first</servlet-name>
+        <url-pattern>/web</url-pattern>
     </servlet-mapping>
     
     <!--generic-->
     
-      <servlet>
-         <servlet-name>second</servlet-name>
-         <servlet-class>com.servlets.useof_genric</servlet-class>
+    <servlet>
+        <servlet-name>second</servlet-name>
+        <servlet-class>com.servlets.useof_genric</servlet-class>
     </servlet>
     <servlet-mapping>
-         <servlet-name>second</servlet-name>
-         <url-pattern>/web2</url-pattern>
+        <servlet-name>second</servlet-name>
+        <url-pattern>/web2</url-pattern>
     </servlet-mapping>
     
     <!--third-->
-     <servlet>
-         <servlet-name>third</servlet-name>
-         <servlet-class>com.servlets.use_of_http_servlet</servlet-class>
+    <servlet>
+        <servlet-name>third</servlet-name>
+        <servlet-class>com.servlets.use_of_http_servlet</servlet-class>
     </servlet>
     <servlet-mapping>
-         <servlet-name>third</servlet-name>
-         <url-pattern>/web3</url-pattern>
+        <servlet-name>third</servlet-name>
+        <url-pattern>/web3</url-pattern>
     </servlet-mapping>
     <!--form-->
-      <servlet>
-         <servlet-name>form</servlet-name>
-         <servlet-class>com.form.first</servlet-class>
+    <servlet>
+        <servlet-name>form</servlet-name>
+        <servlet-class>com.form.first</servlet-class>
     </servlet>
     <servlet-mapping>
-         <servlet-name>form</servlet-name>
-         <url-pattern>/regform</url-pattern>
+        <servlet-name>form</servlet-name>
+        <url-pattern>/regform</url-pattern>
     </servlet-mapping>
     
     
+    <!--success-->
     
+    
+    <servlet>
+        <servlet-name>suc</servlet-name>
+        <servlet-class>com.form.success</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>suc</servlet-name>
+        <url-pattern>/success</url-pattern>
+    </servlet-mapping>
     
     
     <session-config>

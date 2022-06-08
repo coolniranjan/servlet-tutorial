@@ -14,7 +14,7 @@ public class useof_genric extends GenericServlet{
         res.setContentType("text/html");
         PrintWriter pw = res.getWriter(); 
         pw.println("<h2>Hello from life cycle by generic servlet</h2>");
-          pw.println("<a href='http://localhost:9494/WebApplication1/'>back</a>");
+          pw.println("<a href='/WebApplication1/index.html'>back</a>");
     
     }
 }
