@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	 version="3.1">
-    
-    
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <!--servlates declartion-->
     <servlet>
          <servlet-name>first</servlet-name>
-         <servlet-class>com.servlets.FirstServlet</servlet-class>
+         <servlet-class>com.servlets.use_of_servlet</servlet-class>
     </servlet>
     <servlet-mapping>
          <servlet-name>first</servlet-name>
          <url-pattern>/web</url-pattern>
     </servlet-mapping>
+    
+    <!--generic-->
+    
+      <servlet>
+         <servlet-name>second</servlet-name>
+         <servlet-class>com.servlets.useof_genric</servlet-class>
+    </servlet>
+    <servlet-mapping>
+         <servlet-name>second</servlet-name>
+         <url-pattern>/web2</url-pattern>
+    </servlet-mapping>
+    
+    <!--third-->
+     <servlet>
+         <servlet-name>third</servlet-name>
+         <servlet-class>com.servlets.use_of_http_servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+         <servlet-name>third</servlet-name>
+         <url-pattern>/web3</url-pattern>
+    </servlet-mapping>
+    <!--form-->
+      <servlet>
+         <servlet-name>form</servlet-name>
+         <servlet-class>com.form.first</servlet-class>
+    </servlet>
+    <servlet-mapping>
+         <servlet-name>form</servlet-name>
+         <url-pattern>/regform</url-pattern>
+    </servlet-mapping>
+    
+    
     
     
     
@@ -23,4 +49,9 @@
             30
         </session-timeout>
     </session-config>
+
+    
+    
+    
+    
 </web-app>

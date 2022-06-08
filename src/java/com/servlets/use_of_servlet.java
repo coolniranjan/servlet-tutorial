@@ -4,7 +4,7 @@ package com.servlets;
 import jakarta.servlet.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-public class FirstServlet implements Servlet {
+public class use_of_servlet implements Servlet {
 
     ServletConfig conf;
 
@@ -20,7 +20,8 @@ public class FirstServlet implements Servlet {
         System.out.println("sevicing...");
         res.setContentType("text/html");
         PrintWriter pw = res.getWriter(); 
-        pw.println("<h2>Hello from life cycle servlet</h2>");
+        pw.println("<h2>Hello from first servlet</h2>");
+        pw.println("<a href='http://localhost:9494/WebApplication1/'>back</a>");
         System.out.println("in service");
     }
 
