@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-   
     <!--add welcome page-->
-
     <welcome-file-list>
         <welcome-file>home.html</welcome-file>
     </welcome-file-list>
     <!--servlates declartion-->
-   
     <servlet>
         <servlet-name>first</servlet-name>
         <servlet-class>com.servlets.use_of_servlet</servlet-class>
     </servlet>
+ 
     <servlet-mapping>
         <servlet-name>first</servlet-name>
         <url-pattern>/web</url-pattern>
     </servlet-mapping>
-    
     <!--generic-->
-    
     <servlet>
         <servlet-name>second</servlet-name>
         <servlet-class>com.servlets.useof_genric</servlet-class>
@@ -27,7 +23,6 @@
         <servlet-name>second</servlet-name>
         <url-pattern>/web2</url-pattern>
     </servlet-mapping>
-    
     <!--third-->
     <servlet>
         <servlet-name>third</servlet-name>
@@ -46,11 +41,7 @@
         <servlet-name>form</servlet-name>
         <url-pattern>/regform</url-pattern>
     </servlet-mapping>
-    
-    
     <!--success-->
-    
-    
     <servlet>
         <servlet-name>suc</servlet-name>
         <servlet-class>com.form.success</servlet-class>
@@ -59,16 +50,28 @@
         <servlet-name>suc</servlet-name>
         <url-pattern>/success</url-pattern>
     </servlet-mapping>
+    <!--for attribute -->
+    <servlet>
+        <servlet-name>s1</servlet-name>
+        <servlet-class>com.attribute.s1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s1</servlet-name>
+        <url-pattern>/s1</url-pattern>
+    </servlet-mapping>
     
     
+    <servlet>
+        <servlet-name>s2</servlet-name>
+        <servlet-class>com.attribute.s2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s2</servlet-name>
+        <url-pattern>/s2</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-
-    
-    
-    
-    
 </web-app>
