@@ -2,10 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package com.cookies;
+package com.hidden_form_field;
 
 import java.io.IOException;
-import jakarta.servlet.http.Cookie;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -16,7 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author PC
  */
-public class servlet2 extends HttpServlet {
+public class hidden_form2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,43 +31,21 @@ public class servlet2 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet servlet2</title>");
-//            out.println("</head>");
-//            out.println("<body>");
-
-//            getting all  the cookle 
-
-            Cookie[] cookies = request.getCookies();
-            boolean f = false;
-            String name = "";
-            if (cookies == null) {
-                out.println("<h2>you are new user go to home page</h2>");
-                return;
-            } else {
-                for (Cookie c : cookies) {
-                    String tname = c.getName();
-                    if (tname.equals("user_name")) {
-                        f = true;
-                        name = c.getValue();
-
-                    }
-                }
-            }
-            if (f) {
-                out.println("<h2>");
-                out.println("Hello, " + name + " welcome  back to the website");
-                out.println("</h2>");
-
-            } else {
-                out.println("<h2>you are new user go to home page</h2>");
-            }
-//            try get parameter from user--- 
-
-//            out.println("</body>");
-//            out.println("</html>");
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet hidden_form2</title>");            
+            out.println("</head>");
+            out.println("<body>");
+//            to fetch dta
+            String name=request.getParameter("name");
+            
+            out.println("<h2>");
+            out.println("welcome back " + name + "! servlet 2 page");
+            out.println("</h2>");
+            
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
