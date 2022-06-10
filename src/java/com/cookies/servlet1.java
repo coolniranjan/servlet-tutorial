@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
-package com.attribute;
+package com.cookies;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author PC
  */
-public class s2 extends HttpServlet {
+public class servlet1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,22 +31,24 @@ public class s2 extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet s2</title>");
+            out.println("<title>Servlet servlet1</title>");            
             out.println("</head>");
             out.println("<body>");
+          
+//            get parameter from user 
 
-            String n1 = request.getParameter("n1");
-            String n2 = request.getParameter("n2");
-        
-            int nn1 = Integer.parseInt(n1);
-            int nn2 = Integer.parseInt(n2);
-         
-            int p = nn1 * nn2;
-            out.println("<h3>produnct is :</h3>"+p );
+
+            String name = request.getParameter("name");
+            out.println("<h2>");
+            out.println("Hello, "+name +" welcome to the website");
+            out.println("</h2>");
+            out.println("<a href='servlet2'>go to servlet 2</a>");
+              
+//           create cookie
+
+           Cookie c= new Cookie("user_name",name);
+            response.addCookie(c);
             
-            int ss=(int)request.getAttribute("sum");
-            out.println("<h3>sumis :</h3>"+ss );
-
             out.println("</body>");
             out.println("</html>");
         }

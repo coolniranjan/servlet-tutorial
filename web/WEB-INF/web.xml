@@ -9,7 +9,10 @@
         <servlet-name>first</servlet-name>
         <servlet-class>com.servlets.use_of_servlet</servlet-class>
     </servlet>
- 
+    <servlet>
+        <servlet-name>servlet2</servlet-name>
+        <servlet-class>com.cookies.servlet2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>first</servlet-name>
         <url-pattern>/web</url-pattern>
@@ -59,8 +62,6 @@
         <servlet-name>s1</servlet-name>
         <url-pattern>/s1</url-pattern>
     </servlet-mapping>
-    
-    
     <servlet>
         <servlet-name>s2</servlet-name>
         <servlet-class>com.attribute.s2</servlet-class>
@@ -68,6 +69,19 @@
     <servlet-mapping>
         <servlet-name>s2</servlet-name>
         <url-pattern>/s2</url-pattern>
+    </servlet-mapping>
+    <!--for cookies-->
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>com.cookies.servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
